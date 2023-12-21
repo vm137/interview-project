@@ -3,6 +3,7 @@ package main.interview;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
+/* This task was on interview to Adidas project */
 public class ProductOfArray {
   public static void main(String[] args) {
     ProductOfArray pa = new ProductOfArray();
