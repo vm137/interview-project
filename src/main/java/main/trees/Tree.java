@@ -1,4 +1,4 @@
-package main.trees.theory;
+package main.trees;
 
 /**
  * https://www.javatpoint.com/tree-traversal
