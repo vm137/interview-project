@@ -1,16 +1,15 @@
-package main.yandex.onesandzeros;
+package main.yandex.binarygap;
 
 /**
  * Дан массив из нулей и единиц. Нужно определить, какой максимальный по длине подынтервал единиц
  * можно получить, удалив ровно один элемент массива.
- *
  * Удалять один элемент из массива обязательно.
  */
 
 // assert(maxOnes(new int[] {1, 1, 0, 1})) == 3
 // assert(maxOnes(new int[] {1, 1, 0, 0, 1})) == 2
 
-public class Solution {
+public class MyYndxSolution {
     public int maxOnes(int[] nums) {
         int maxOnes = 0;
         if (nums.length == 0) {
@@ -55,9 +54,12 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
-        int[] nums = new int[] {0, 1, 1, 0, 0, 1, 1};
-//        int[] nums = new int[] {1};
+        MyYndxSolution s = new MyYndxSolution();
+//        int[] nums = new int[] {1}; // 1
+//        int[] nums = new int[] {1, 1, 0, 1}; // 3
+//        int[] nums = new int[] {1, 1, 0, 0, 1}; // 2
+        int[] nums = new int[] {0, 1, 1, 0, 0, 1, 1}; // 2
+
         int maxOnes = s.maxOnes(nums);
         System.out.println(maxOnes);
     }
