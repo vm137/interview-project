@@ -9,12 +9,12 @@ import java.util.Map;
 
 // given int array [ 3, -1, 5, -2, 0, 2, -3, 5 ]
 // find contiguous (adjacent) subarray with max sum
-public class App {
+public class MaxSubarray {
     public static void main(String[] args) {
-        App app = new App();
+        MaxSubarray maxSubarray = new MaxSubarray();
 
         int[] arr = new int[] { 3, -1, 5, -2, 0, 2, -3, 5 };
-        int[] maxSumSubArray = app.findMaxSumSubArray(arr);
+        int[] maxSumSubArray = maxSubarray.findMaxSumSubArray(arr);
         System.out.println(Arrays.toString(maxSumSubArray));
     }
 

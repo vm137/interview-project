@@ -1,4 +1,4 @@
-package main.polymorphism;
+package epam.interview.polymorphism;
 
 class Sample {
     public void display() {

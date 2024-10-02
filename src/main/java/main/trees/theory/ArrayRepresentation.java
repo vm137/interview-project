@@ -16,7 +16,7 @@ package main.trees.theory;
 // Helper class (Node class)
 public class ArrayRepresentation {
 
-    // Main driver method
+    // LongestPalindrome driver method
     public static void main(String[] args) {
 
         // Creating object of class 2 inside main() method
