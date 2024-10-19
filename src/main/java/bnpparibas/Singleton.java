@@ -3,24 +3,17 @@ package bnpparibas;
 public class Singleton {
     private static Singleton instance;
 
-    public Singleton() {
+    public static Singleton getSingleton() {
         if (instance == null) {
-            instance = this;
+            instance = new Singleton();
         }
-    }
-
-    void m1() {
-    }
-
-    Singleton getSingleton() {
         return instance;
     }
 
     public static void main(String[] args) {
-        Singleton singleton = new Singleton();
-        Singleton singleton2 = new Singleton();
+        Singleton singleton1 = Singleton.getSingleton();
+        Singleton singleton2 = Singleton.getSingleton();
 
-        Singleton singleton1 = singleton2.getSingleton();
-        singleton1.m1();
+        System.out.println(singleton1 == singleton2);
     }
 }

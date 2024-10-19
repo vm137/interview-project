@@ -6,7 +6,7 @@ class CacheTest {
 
     @Test
     void testCache() {
-        Cache cache = new Cache(3);
+        LinkedCache cache = new LinkedCache(3);
 
     }
 
