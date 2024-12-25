@@ -13,7 +13,7 @@ package main.trees.theory;
 
 
 // Class 1
-// Helper class (Node class)
+// Helper class (DigitNode class)
 public class ArrayRepresentation {
 
     // LongestPalindrome driver method
