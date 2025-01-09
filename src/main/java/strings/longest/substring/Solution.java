@@ -16,6 +16,10 @@ import java.util.Set;
  */
 public class Solution {
     public int longestCommonSubsequence(String text1, String text2) {
+        if (text1.contains(text2) || text2.contains(text1)) {
+            return Math.min(text1.length(), text2.length());
+        }
+
         Set<String> variants1 = new HashSet<>(strToVariations(text1));
         int maxLength = 0;
         for (String v2 : strToVariations(text2)) {
@@ -29,7 +33,7 @@ public class Solution {
     List<String> strToVariations(String str) {
         str = str.trim();
         int length = str.length();
-        int max = Integer.parseInt("1".repeat(length), 2);
+        int max = (int) Math.pow(2, length) - 1;
         List<String> variants = new ArrayList<>();
         for (int i = 1; i <= max ; i++) {
             String fmt = "%" + length + "s";
@@ -57,12 +61,15 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int len = solution.longestCommonSubsequence("abcabcbb", "abcabcbb");
+//        int len = solution.longestCommonSubsequence("abcabcbb", "abcabcbb");
+//        System.out.println(len);
+
+        String text1 = "papmretkborsrurgtina";
+        String text2 = "nsnupotstmnkfcfavaxgl";
 
 //        String text1 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 //        String text2 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-//        int len = solution.longestCommonSubsequence(text1, text2);
+        int len = solution.longestCommonSubsequence(text1, text2);
         System.out.println(len);
     }
 }
-
