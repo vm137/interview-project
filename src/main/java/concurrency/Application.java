@@ -8,6 +8,10 @@ import java.util.List;
 
 public class Application {
 
+//    synchronized Application() {
+//
+//    }
+
     private void m1() throws InterruptedException {
         Collection<Integer> syncCollection = Collections.synchronizedCollection(new ArrayList<>());
 
@@ -38,6 +42,12 @@ public class Application {
         thread3.join();
 
         System.out.println(uppercasedCollection);
+
+        boolean interrupted = Thread.interrupted();
+
+//        Future<String> future = Executors.newSingleThreadExecutor().submit(() -> {});
+//
+//        new FutureTask<>(C, result);
 
     }
 

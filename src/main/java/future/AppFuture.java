@@ -14,7 +14,7 @@ public class AppFuture {
     void calculate() throws ExecutionException, InterruptedException {
         CompletableFuture<String> future
             = CompletableFuture.supplyAsync(() -> "Hello Async");
-
+ 
         // ...
 
         System.out.println("Hello: " + future.get());
