@@ -16,7 +16,7 @@ class Parenthesis {
 
     public boolean isBalanced(String expr) {
         String[] chrs = expr.split("");
-        Stack<String> stack = new Stack<>();
+        Stack<String> stack = new Stack<>(); // change to Dequeue
         String openings = "([{";
         String closing = ")]}";
 
